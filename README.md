@@ -4,7 +4,8 @@
 - con el comando arecord -l verificar el número de tarjeta y número de dispositivo del micrófono
 - ambos datos editarlos en el siguiente archivo
 - editar el archivo /home/pi/.asoundrc y colocar lo siguiente
--- pcm.!default {
+ '''
+ pcm.!default {
   type asym
   capture.pcm "mic"
   playback.pcm "speaker"
@@ -21,5 +22,5 @@ pcm.speaker {
     pcm "hw:[card number],[device number]"
   }
 }
-
+'''
 - con el comando speaker-test -t wav, se confirma que esté correctamente funcionando el parlante
